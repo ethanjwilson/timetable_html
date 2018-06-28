@@ -1,8 +1,24 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Timetable - Home
-    body
+include includes/head
+
+nav
+    ul
+        li: a(href="index.html" class="active") Home
+            hr
+        li: a(href="login.html") Login
+            hr
+.banner
+    article(class="harsh")
+        h2 Sign Up
+        form(action="", method="post" class="form")
+            input(type="text" name="username" placeholder="Username" id="username")
+            
+            input(type="password" name="password" placeholder="Password" id="password")
+        
+            input(type="text" name="username" placeholder="Email" id="username")
+            
+            input(type="submit", value="Login" id="submit")
+        
+
+
+                        
+        

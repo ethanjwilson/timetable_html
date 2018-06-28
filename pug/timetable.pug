@@ -1,0 +1,35 @@
+include includes/head
+
+
+nav
+    ul
+        li: a(href="index.html") Home
+            hr
+        li: a(href="timetable.html" class="active") Timetable
+            hr
+        li: a(href="classes.html") Classes
+            hr
+main
+    article 
+        .bar
+            .title
+                h2 Your Week:
+            .options
+                a(href="#" class="button") Edit Timetable
+                a(href="#" class="button delete") Delete Timetable 
+        table
+            thead
+                tr
+                    th Monday
+                    th Tuesday
+                    th Wednesday
+                    th Thursday
+                    th Friday
+            tbody
+                +spells('Digital', 'Physics', 'English', 'Media', 'English')
+                +spells('Media', 'Digital', 'Accounting', 'Physics', 'Math')
+                +spells('Math', 'Accounting', 'Accounting', 'Physics', 'Math')
+                +spells('English', 'Media', 'Math', 'Digital', 'Physics')
+                +spells('English', 'Media', 'Free', 'Digital', 'Accounting')
+
+            

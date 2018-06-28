@@ -1,0 +1,320 @@
+$grey: rgba(116, 127, 137, 1);
+//$red: rgba(250, 128, 144, 1);
+$blue: rgba(0, 148, 198, 1);
+$white: rgba(253, 255, 253, 1);
+$red: #D81E5B;
+$white_red: rgba(254, 232, 234, 1);
+$yellow: rgba(255, 241, 98, 1);
+$black: rgba(22, 24, 25, 1);
+
+$shadow-harsh: 0px 0px 30px 1px rgba(0,0,0,0.7)
+
+$shadow: 0px 0px 30px 1px rgba(0,0,0,0.2)
+$shadow-in: inset $shadow
+
+$trans: all 0.3s ease-in-out
+    
+* 
+    margin: 0
+    padding: 0
+    border: 0
+
+body
+    background-color: $white
+    color: $black
+    font-size: 1.1em
+    font-family: 'Raleway', sans-serif
+
+hr 
+    height: 5px
+    background-color: $blue
+    margin: auto
+
+h1, h2, h3, h4, h5, h6 
+    color: $blue
+    text-align: center
+
+    hr  
+        width: 30%
+
+h1 
+    font-size: 4em
+
+h2 
+    font-size: 3em
+
+h3 
+    font-size: 2em
+
+ul 
+    list-style: none
+
+a 
+    text-decoration: none
+    color: inherit
+
+p 
+    text-align: center
+
+header
+    height: 20vh
+    background-color: $white
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+header p 
+    color: $grey
+    padding: 1em
+
+nav 
+    display: flex
+    height: 10vh
+    background-color: $white
+    width: 100%
+    color: $grey
+    transition: $trans
+    animation: shadow-up ease 0.3s 1 normal forwards
+
+nav:hover 
+    color: $black
+    animation: shadow-down ease 0.5s 1 normal forwards
+    background-color: $white
+
+nav ul
+    max-width: 800px
+    display: flex
+    margin: auto
+    justify-content: space-around
+
+nav ul li 
+    height: 10vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+nav ul li a
+    font-size: 2em
+    padding: 10px 1em 0 1em
+    transition: $trans
+    text-align: center
+
+.active
+    color: $blue
+    padding: 0px 1em 0 1em
+    margin: auto
+    hr 
+        background-color: $blue
+        width: 100%
+
+nav ul li a:hover 
+    padding: 0 1em
+    color: $red
+
+nav ul li a hr 
+    width: 0
+    background-color: $red
+    transition: $trans
+
+nav ul li a:hover hr 
+    background-color: $red
+    width: 100%
+    
+main 
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+article
+    padding: 2em
+    box-shadow: $shadow
+    width: max-content
+    margin: auto
+
+.banner
+    height: 70vh
+    width: 100%
+    background-image: url('../imgs/banner.jpg')
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    display: flex
+
+.harsh 
+    box-shadow: $shadow-harsh
+    margin: auto
+    h2 
+        color: $white
+
+.form
+    display: flex
+    flex-direction: column
+    padding: 1em
+
+    hr 
+        width: 50%
+        height: 5px
+        margin: 0 auto 0.5em auto
+        
+    input
+        font-size: 1.5em
+        padding: 0.5em
+        margin: 0.5em
+        color: $grey
+        //box-shadow: $shadow-in
+
+    input:focus
+        color: $blue
+        box-shadow: $shadow-in
+
+
+    #submit
+        margin: auto
+        box-shadow: none
+        width: max-content
+        padding: 0.5em 2em
+        font-size: 1.5em
+        box-shadow: $shadow
+        background-color: $white
+        border-radius: 5px
+        color: $grey
+        transition: $trans
+
+    #submit:hover 
+        color: $white
+        background-color: $blue
+        box-shadow: $shadow-harsh
+
+
+.button
+    height: 1em
+    width: max-content
+    padding: 1em
+    line-height: 1em
+    border: 2px solid $blue
+    color: $blue
+    border-radius: 5px
+    margin: auto
+    margin-left: 1em
+    transition: $trans
+
+.delete
+    border: 2px solid $red
+    color: $red
+
+.bar 
+    display: flex
+    border-bottom: 5px solid $blue
+    justify-content: space-between
+    padding: 1em 0.5em
+
+    .title
+        margin: auto 0
+
+    .options
+        background-color: $white
+        display: flex
+
+.button:hover
+    box-shadow: $shadow
+    color: $white
+    background-color: $blue
+
+.delete:hover
+   background-color: $red
+   color: $white
+
+
+table 
+    margin: 0 auto
+    padding: 0.5em
+
+thead 
+    color: $white
+    font-size: 1.5em
+    tr 
+        background-color: $blue
+        th 
+            padding: 1em
+
+tbody
+    font-size: 1.3em
+
+tr:nth-child(even) td
+    background-color: $white_red
+
+tr:nth-child(even) td:hover
+    background-color: $blue
+
+td 
+    padding: 1em
+    text-align: center
+    background-color: $white
+    color: $grey
+    transition: $trans
+
+td:hover 
+    color: $white
+    background-color: $blue
+
+
+    
+
+
+
+
+
+
+@keyframes shadow-down
+    0%
+        box-shadow: $shadow
+
+    50%
+        box-shadow: none
+
+    100%
+        box-shadow: $shadow-in
+
+
+@keyframes shadow-up
+    0% 
+        box-shadow: $shadow-in
+
+    50%
+        box-shadow: none
+
+    100%
+        box-shadow: $shadow
+
+
+@media screen and (max-width: 960px)
+    body 
+        display: flex
+        flex-direction: column
+    header
+        height: 150px
+        padding: 15px 0 5px 0
+        h1 
+            font-size: 50px
+
+    main 
+        margin: 0
+        
+
+    article
+        width: 100%
+        margin: 0 auto
+        padding: 15px 0
+    nav 
+        height: 0px
+        transform: translateY(-500px)
+        ul 
+            width: 100%
+            flex-direction: column
+    nav ul li a 
+        font-size: 2em
+
+    nav ul li a hr:hover 
+        width: 20%
